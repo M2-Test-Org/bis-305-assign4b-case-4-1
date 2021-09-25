@@ -1,69 +1,16 @@
-# BIS 305 Assignment 4 - Case Problem 1
+# BIS 305 Assignment 4 - Case Problem 1.
 
 This repo is for use to code and debug the BIS 305 Assignment 4 - Case Problem 1.
-
-## Code from the Chapter 2 Case Assignment
-
-The MindTap instructions for this assignment state:
-```text
-Using the program you wrote in Case Study 1 of Chapter 2, replace...
-```
-
-Therefore, here is the starter code:
-
-```csharp
-using System;
-using static System.Console;
-using System.Globalization;
-
-namespace GreenvilleRevenue
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            const int ENTRANCE_FEE = 25;
-            string entryString;
-            int numThisYear;
-            int numLastYear;
-            int revenue;
-            bool isThisYearGreater;
-
-            Write("Enter number of contestants last year >> ");
-            entryString = ReadLine();
-            numLastYear = Convert.ToInt32(entryString);
- 
-            Write("Enter number of contestants this year >> ");
-            entryString = ReadLine();
-            numThisYear = Convert.ToInt32(entryString);
-
-            revenue = numThisYear * ENTRANCE_FEE;
-            isThisYearGreater = numThisYear > numLastYear;
-            WriteLine("Last year's competition had {0} contestants, and this year's has {1} contestants",
-               numLastYear, numThisYear);
-
-            WriteLine("Revenue expected this year is {0}", revenue.ToString("C", CultureInfo.GetCultureInfo("en-US")));
-
-            WriteLine("It is {0} that this year's competition is bigger than last year's.", isThisYearGreater);
-
-        }
-    }
-}
-```
-
-## Here are use cases to use to test your code
 
 ### Use Case 1
 
 The inputs in the console could be like:
-
 ```html
 Enter number of contestants last year >> 6
 Enter number of contestants this year >> 14
 ```
 
 The output from the console should be:
-
 ```html
 Last year's competition had 6 contestants, and this year's has 14 contestants
 Revenue expected this year is $350.00
@@ -73,14 +20,12 @@ The competition is more than twice as big this year!
 ### Use Case 2
 
 The inputs in the console could be like:
-
 ```html
 Enter number of contestants last year >> 39
 Enter number of contestants this year >> 47
 ```
 
 The output from the console should be:
-
 ```html
 Last year's competition had 39 contestants, and this year's has 47 contestants
 Revenue expected this year is $1,175.00
@@ -90,14 +35,12 @@ The competition is bigger than ever!
 ### Use Case 3
 
 The inputs in the console could be like:
-
 ```html
 Enter number of contestants last year >> 55
 Enter number of contestants this year >> 54
 ```
 
 The output from the console should be:
-
 ```html
 Last year's competition had 55 contestants, and this year's has 54 contestants
 Revenue expected this year is $1,350.00
