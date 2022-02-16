@@ -46,3 +46,18 @@ Last year's competition had 55 contestants, and this year's has 54 contestants
 Revenue expected this year is $1,350.00
 A tighter race this year! Come out and cast your vote!
 ```
+
+### Here is a flowchart for the logic:  
+<!-- below from https://github.com/mermaid-js/mermaid -->
+```mermaid
+flowchart TB
+A["Display  #quot;Enter number of contestants last year >>  #quot;\n in the console"] --> B[Get input from the user.];
+B --> C["Display  #quot;Enter number of contestants this year >> #quot;\n in the console"] --> D[Get input from the user.];
+D --> E["Display  #quot;Last year's competition had {LastYearEntry} contestants,\n and this year's has {ThisYearEntry} contestants #quot;\n in the console"];
+E --> F{Is this year's entry more than\n twice as many contestants as last year?};
+F --> |Yes| G["Display  #quot;The competition is more than twice as big this year! #quot; "];
+F --> |No| H{Is this year's entry is more than\n contestants than last year,\n but not more than twice as big?};
+H --> |Yes| I["Display  #quot;The competition is bigger than ever! #quot;"];
+H --> |No| J{Is this year's entry\n smaller than last year's?};
+J --> |Yes| K["Display  #quot;A tighter race this year! Come out and cast your vote! #quot;"];
+```
